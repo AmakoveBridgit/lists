@@ -4,7 +4,12 @@ fun main() {
 
     personObject()
     height()
-    var evenNums
+    var a = Vehicles("KBD020F",50)
+    var b = Vehicles("KDA230G",60)
+    var c= Vehicles("KFC374P",80)
+    var d = Vehicles("KAC354V",65)
+    var listVehicles= listOf(a,b,c,d)
+    println(vehicleList(listVehicles))
 
 
    }
@@ -64,4 +69,13 @@ fun addList():String{
 //5.Write a function that takes in a list of Car objects each with a
 //registration and mileage attribute and returns the average mileage of
 //all the vehicles in the list.
-class car(var registarion:String,)
+
+data class Vehicles(var registration:String, var mileage:Int)
+fun vehicleList(vehicle:List<Vehicles>):Int{
+    var average=0
+    vehicle.forEach { new->new.mileage
+        average+=new.mileage
+    }
+    var totalAverage=vehicle.count()
+    return totalAverage
+}
